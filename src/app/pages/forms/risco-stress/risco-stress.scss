@@ -1,0 +1,57 @@
+:host {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.risco-stress {
+  --mat-stepper-container-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &__title {
+    font-family: "Inter";
+    line-height: 1.35;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-wrap: wrap;
+    width: 60vw;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+
+    &__first-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      &__field {
+        display: flex;
+        flex: 1 1 45%;
+      }
+
+      &__double-field {
+        display: flex;
+        flex: 1 1 45%;
+        gap: 10px;
+
+        &__input {
+          display: flex;
+          flex: 1 1 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<div class="avaliacao-geral">
+  <h2 class="avaliacao-geral__title">AVALIAÇÃO DE TRABALHO 1: Identificação dos principais problemas</h2>
+  <mat-stepper orientation="vertical" [linear]="true" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup" class="avaliacao-geral__form">
+        <ng-template matStepLabel>Dados e tarefas da empresa analisados</ng-template>
+        <div class="avaliacao-geral__form__first-form">
+          <normax-input
+            label="Empresa"
+            placeholder="Nome da empresa"
+          ></normax-input>
+          <normax-input
+            label="Empresa"
+          ></normax-input>
+          <normax-input
+            label="Empresa"
+          ></normax-input>
+          <normax-input
+            label="Empresa"
+          ></normax-input>
+          <normax-input
+            label="Empresa"
+          ></normax-input>
+          <normax-input
+            label="Empresa"
+          ></normax-input>
+          <normax-input
+            label="Empresa"
+          ></normax-input>
+          <normax-input
+            label="Empresa"
+          ></normax-input>
+          <normax-input
+            label="Empresa"
+          ></normax-input>
+        </div>
+        <div>
+          <button matButton matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <div>
+          <button matButton matStepperPrevious>Back</button>
+          <button matButton matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button matButton matStepperPrevious>Back</button>
+        <button matButton (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>

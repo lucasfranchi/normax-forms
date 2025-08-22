@@ -1,0 +1,108 @@
+<div class="risco-stress">
+  <h2 class="risco-stress__title">PRE AVALIAÇÃO RÁPIDA (QUICK-ASSESSMENT) do risco de stresse relacionado com o trabalho</h2>
+  <mat-stepper orientation="vertical" [linear]="true" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup" class="risco-stress__form">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <div class="risco-stress__form__first-form">
+          <mat-form-field
+            class="risco-stress__form__first-form__field"
+            appearance="outline"
+            floatLabel="always"
+          >
+            <mat-label>Empresa</mat-label>
+            <input
+              matInput
+              placeholder="Nome da empresa"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field
+            class="risco-stress__form__first-form__field"
+            appearance="outline"
+            floatLabel="always"
+          >
+            <mat-label>Posto de trabalho</mat-label>
+            <input
+              matInput
+              placeholder="Posto de trabalho ou GHE"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field
+            class="risco-stress__form__first-form__field"
+            appearance="outline"
+            floatLabel="always"
+          >
+            <mat-label>Setor</mat-label>
+            <input
+              matInput
+              placeholder="Setor da empresa"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
+          <div class="risco-stress__form__first-form__double-field">
+            <mat-form-field
+              class="risco-stress__form__first-form__double-field__input"
+              appearance="outline"
+              floatLabel="always"
+            >
+              <mat-label>N de empregados Masc</mat-label>
+              <input
+                matInput
+                placeholder="Qtde empregados masculinos"
+                formControlName="firstCtrl"
+                required
+              />
+            </mat-form-field>
+            <mat-form-field
+              class="risco-stress__form__first-form__double-field__input"
+              appearance="outline"
+              floatLabel="always"
+            >
+              <mat-label>N de empregadas Fem</mat-label>
+              <input
+                matInput
+                placeholder="Qtde empregadas femininas"
+                formControlName="firstCtrl"
+                required
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <button matButton matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input
+            matInput
+            formControlName="secondCtrl"
+            placeholder="Ex. 1 Main St, New York, NY"
+            required
+          />
+        </mat-form-field>
+        <div>
+          <button matButton matStepperPrevious>Back</button>
+          <button matButton matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button matButton matStepperPrevious>Back</button>
+        <button matButton (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>

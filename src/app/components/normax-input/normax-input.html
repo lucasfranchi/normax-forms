@@ -1,0 +1,11 @@
+<mat-form-field [appearance]="appearance" [floatLabel]="floatLabel">
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    [type]="type"
+    [placeholder]="placeholder"
+    [ngModel]="input"
+    (ngModelChange)="onChange($event)"
+    (blur)="onTouch()"
+  />
+</mat-form-field>
